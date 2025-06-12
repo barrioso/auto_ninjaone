@@ -39,9 +39,9 @@ Feature: Validate login screen behavior and flows in NinjaOne login page
     Then I should the an error message displayed at the top conter of the modal
   
   @login, @smoke, @navigation1
-  Scenario: User navigates to the Reset Password page
-    # This scenario verifies that a user is able to navigate to the Reset Password page
-    # And the URL contains the correct path  
+  Scenario: User can see the checkbox enabled after clicking on the Keep me signed in label
+    # This scenario verifies that a user is able to click on the Keep me signed in label 
+    # And the checkbox remains checked
     When I click on the Keep me signed in label 
     Then I the checkbox of the left remains checked 
 
