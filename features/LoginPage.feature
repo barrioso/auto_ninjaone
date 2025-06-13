@@ -4,7 +4,7 @@ Feature: Validate login screen behavior and flows in NinjaOne login page
     Given I navigate to the NinjaOne login page
 
   @login, @smoke, @critical
-  Scenario: Content validation for the NingaOne Login screen
+  Scenario: Verify content for the NingaOne Login screen
     # This scenario verifies that a user can see the elements for the login screen
     Then I should see the email input field
     And I should see the password input field
@@ -14,7 +14,7 @@ Feature: Validate login screen behavior and flows in NinjaOne login page
     And I should see the Do not have an account? link
 
   @login, @smoke, @critical, @uicontent
-  Scenario: Login with valid credentials displays MFA setup modal
+  Scenario: Verify MFA set up modalis displayed after entering valid credentials
     # This scenario verifies that a user who logs in with valid credentials can see the MFA modal
     When I enter an valid Email and Password
     And I click on the Sign In button
