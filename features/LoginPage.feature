@@ -3,7 +3,7 @@ Feature: Validate login screen behavior and flows in NinjaOne login page
   Background: Launching NinjaOne login page
     Given I navigate to the NinjaOne login page
 
-  @login, @smoke, @critical1
+  @login, @smoke, @critical
   Scenario: Verify content for the NingaOne Login screen
     # This scenario verifies that a user can see the elements for the login screen
     Then I should see the email input field
@@ -39,11 +39,11 @@ Feature: Validate login screen behavior and flows in NinjaOne login page
     When I click on the Sign In button
     Then I should the an error message displayed at the top conter of the modal
   
-  @login, @smoke, @navigation1
+  @login, @smoke, @navigation
   Scenario: User can see the checkbox enabled after clicking on the Keep me signed in label
     # This scenario verifies that a user is able to click on the Keep me signed in label 
     # And the checkbox remains checked
-    When I click on the Keep me signed in label 
+    When I should see the Keep me signed in label
     Then I the checkbox of the left remains checked 
 
   @login, @smoke, @navigation
