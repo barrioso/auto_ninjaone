@@ -100,3 +100,7 @@ Then(
     await this.loginPage.verifyKeepMeSignedCheckbosIsVisible();
   }
 );
+
+When('I click on the Keep me signed in label', async function () {
+  await this.loginPage.clickKeepSignedLink();
+});
