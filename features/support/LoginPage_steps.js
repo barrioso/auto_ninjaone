@@ -79,14 +79,24 @@ When("I click on the Do not have an account hyperlink", async function () {
   await this.loginPage.clickDontHaveAccountLink();
 });
 
-Then('I should be redirected to a URL containing {string}', async function (expectedUrlPart) {
-  await this.loginPage.verifyUrlContains(expectedUrlPart)
+Then(
+  "I should be redirected to a URL containing {string}",
+  async function (expectedUrlPart) {
+    await this.loginPage.verifyUrlContains(expectedUrlPart);
+  }
+);
+
+Then("I should see the Keep me signed in label", async function () {
+  await this.loginPage.verifyKeepMeSignedLabelIsVisible();
 });
 
-When('I click on the Keep me signed in label', async function () {
-  await this.loginPage.clickKeepSignedLink();
-});
-
-Then('I the checkbox of the left remains checked', async function () {
+Then("I the checkbox of the left remains checked", async function () {
   await this.loginPage.verifyKeepMeSignedCheckboxIsCheck();
 });
+
+Then(
+  "I should see the checbox to the left side of the  Keep me signed in label",
+  async function () {
+    await this.loginPage.verifyKeepMeSignedCheckbosIsVisible();
+  }
+);

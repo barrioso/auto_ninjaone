@@ -77,6 +77,11 @@ exports.LoginPage = class LoginPage {
     await expect(this.signin_button).toBeVisible();
   }
 
+  async verifyKeepMeSignedCheckbosIsVisible() {
+    await this.keepsigned_checkbox.waitFor({ state: "visible" });
+    await expect(this.keepsigned_checkbox).toBeVisible();
+  }
+
   async verifyKeepMeSignedLabelIsVisible() {
     await this.keepsigned_labl.waitFor({ state: "visible" });
     await expect(this.keepsigned_labl).toBeVisible();

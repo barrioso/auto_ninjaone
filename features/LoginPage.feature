@@ -3,13 +3,14 @@ Feature: Validate login screen behavior and flows in NinjaOne login page
   Background: Launching NinjaOne login page
     Given I navigate to the NinjaOne login page
 
-  @login, @smoke, @critical
+  @login, @smoke, @critical1
   Scenario: Verify content for the NingaOne Login screen
     # This scenario verifies that a user can see the elements for the login screen
     Then I should see the email input field
     And I should see the password input field
     And I should see the Sign in button
-    And I should see the Keep me signed in checkbox
+    And I should see the checbox to the left side of the  Keep me signed in label
+    And I should see the Keep me signed in label
     And I should see the Forgot your password? link
     And I should see the Do not have an account? link
 
